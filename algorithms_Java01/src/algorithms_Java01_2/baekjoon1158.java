@@ -15,15 +15,14 @@ public class baekjoon1158 {
         Queue<Integer>que = new LinkedList<>();
         
         for (int i = 1; i < N + 1; i++) {
-        	que.add(i);
+        	que.offer(i);
         }
         StringBuilder sb = new StringBuilder();
         sb.append("<");
         
         while(que.size() !=  1) {
         	for(int i = 0; i < M - 1; i++) {
-            	que.add(que.poll());
-            	System.out.println(que);
+            	que.offer(que.poll());
             } 
         	sb.append(que.poll()).append(", ");
         } 
