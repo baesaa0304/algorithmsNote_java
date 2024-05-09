@@ -13,7 +13,7 @@ public class baekjoon2805 {
 		int M = Integer.parseInt(st.nextToken()); // 가져가야할 나무 수 길이
 		int[] trees = new int[N];
 		StringTokenizer truckTokenizer = new StringTokenizer(br.readLine());
-		int max_tree = Integer.MIN_VALUE; // 나무들 중 가장 큰 나무
+		int max_tree = 0; // 나무들 중 가장 큰 나무
 		int min_tree = 0;
 		int H = 0; // 가져가야 최대값 나무
 		for (int i =0; i < N; i++) {
@@ -30,10 +30,10 @@ public class baekjoon2805 {
 						cutTree += (trees[i] - mid);
 					}	
 			 }
-			 if (cutTree >= M) {
+			 if (cutTree >= M) { // M보다 많이 가져갈 수 있으면 높이를 늘림.
 				 H = mid;
 				 min_tree = mid + 1;
-			} else {
+			} else { // M보다 적게 가져갈 수 있으면 높이를 줄임.
 				max_tree = mid - 1;
 			}
 		}
