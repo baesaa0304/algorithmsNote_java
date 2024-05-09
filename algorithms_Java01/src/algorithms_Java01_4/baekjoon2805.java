@@ -15,7 +15,7 @@ public class baekjoon2805 {
 		StringTokenizer truckTokenizer = new StringTokenizer(br.readLine());
 		int max_tree = Integer.MIN_VALUE; // 나무들 중 가장 큰 나무
 		int min_tree = 0;
-		int result = 0; // 가져가야 최대값 나무
+		int H = 0; // 가져가야 최대값 나무
 		for (int i =0; i < N; i++) {
 			trees[i] = Integer.parseInt(truckTokenizer.nextToken()); // 현재 있는 나무들
 			max_tree = Math.max(max_tree, trees[i]);
@@ -31,13 +31,13 @@ public class baekjoon2805 {
 					}	
 			 }
 			 if (cutTree >= M) {
-				 result = mid;
+				 H = mid;
 				 min_tree = mid + 1;
 			} else {
 				max_tree = mid - 1;
 			}
 		}
-		System.out.println(result);
+		System.out.println(H);
 	}
 
 }
