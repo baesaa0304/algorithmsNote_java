@@ -5,7 +5,6 @@ import java.util.*;
 public class Immigration_programmers {
 	public long solution(int n, int[] times) {
 		long answer = Long.MAX_VALUE;;
-		Arrays.sort(times);
 	    long min_time = times[0];
 	    long max_time =  (long)times[times.length-1]*(long)n;
 	        while(min_time <= max_time) {
