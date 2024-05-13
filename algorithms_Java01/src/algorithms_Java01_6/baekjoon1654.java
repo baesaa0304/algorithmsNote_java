@@ -24,16 +24,19 @@ public class baekjoon1654 {
 		while(min_line <= max_line) {
 			
 			long mid = (max_line + min_line) / 2;
+			System.out.println("mid 값 " + mid);
 			int total_line = 0;
-			
 			for(int line : Lines) {
 				total_line += (line / mid);
 			}
+			System.out.println("total_line 값 " + total_line);
 			
-			if (total_line <= M) {
-				max_line = mid-1;
-			} else {
+			if (total_line >= M) {
 				min_line = mid+1;
+				System.out.println("min_line 값" + min_line);
+			} else {
+				max_line = mid-1;
+				System.out.println("max_line 값 " + max_line);
 			}
 		}
 		System.out.println(max_line);
