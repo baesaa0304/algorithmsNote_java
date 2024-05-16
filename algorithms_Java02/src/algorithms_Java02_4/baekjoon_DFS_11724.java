@@ -24,7 +24,7 @@ public class baekjoon_DFS_11724 {
 			v = Integer.parseInt(sts.nextToken());
 			arr[u][v] = arr[v][u] = 1;
 		}
-		for(int i =1; i <= N; i++) {
+		for(int i = 1; i <= N; i++) {
 			if(!visit[i]) {
 				dfs(i);
 				cnt++;
