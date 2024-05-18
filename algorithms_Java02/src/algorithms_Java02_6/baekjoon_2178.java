@@ -41,9 +41,9 @@ public class baekjoon_2178 {
 				int poll_y = poll[1];
 				for(int i = 0; i < 4; i++) {
 					int next_x = dx[i] + poll_x;
-					int next_y = dy [i] + poll_y;
+					int next_y = dy[i] + poll_y;
 					if (next_x >= 0 && next_y >= 0 && next_x < N && next_y < M && !visit[next_x][next_y] && arr[next_x][next_y] == 1) {
-						que.offer(new int[] {next_x,next_y}); // 만약 상하좌우에 배추가 있고 체크하지 않은곳이라면 좌표를 지정
+						que.offer(new int[] {next_x,next_y});
 						visit[next_x][next_y] = true; // 체크
 						arr[next_x][next_y] = arr[poll_x][poll_y] + 1;
 					}
