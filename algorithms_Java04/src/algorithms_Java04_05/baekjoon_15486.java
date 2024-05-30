@@ -22,6 +22,7 @@ public class baekjoon_15486 {
             int pay = schedule[i][1];
             
             if (i + time - 1 < N) { // i + time - 1이 N을 초과하지 않는지 확인
+            	// 생각이...정말 안 나... 비교 어찌하노!
                 dp[i + time] = Math.max(dp[i + time], dp[i] + pay); // dp[i + time - 1]에 저장
             }
             
