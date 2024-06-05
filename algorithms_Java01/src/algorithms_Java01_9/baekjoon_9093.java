@@ -13,7 +13,6 @@ public class baekjoon_9093 {
             StringBuilder result = new StringBuilder();
             while (st.hasMoreTokens()) {
                 String word = st.nextToken();
-                System.out.println(word);
                 StringBuffer sb = new StringBuffer(word);
                 String reversedStr = sb.reverse().toString();
                 result.append(reversedStr).append(" "); // 각 단어 뒤에 공백 추가
