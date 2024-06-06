@@ -1,4 +1,4 @@
-package algorithms_Java01_6;
+package algorithms_Java01_f;
 
 import java.util.*;
 import java.io.*;

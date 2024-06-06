@@ -1,4 +1,4 @@
-package algorithms_Java01_10;
+package algorithms_Java01_j;
 import java.util.Arrays;
 import java.util.Stack;
 
