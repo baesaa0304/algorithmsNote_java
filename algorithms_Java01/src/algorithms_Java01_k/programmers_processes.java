@@ -20,7 +20,6 @@ public class programmers_processes {
 	    public int solution(int[] priorities, int location) {
 	        PriorityQueue<Integer> queue = new PriorityQueue<>(Collections.reverseOrder()); // 우선순위 큐 선언
 	        int answer = 0;
-
 	        // 우선순위 큐에 우선순위 요소 추가
 	        for (int i : priorities) {
 	            queue.offer(i);
