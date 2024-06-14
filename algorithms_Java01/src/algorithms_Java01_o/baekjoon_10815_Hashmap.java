@@ -27,7 +27,7 @@ public class baekjoon_10815_Hashmap {
 	        }
 	        
 	        // 결과 출력
-	        System.out.print(sb.toString());
+	         System.out.print(sb.toString());
 	    }
 
 }
