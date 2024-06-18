@@ -23,8 +23,25 @@ public class baekjoon_2606 {
 			arr[a][b] = arr[b][a] =  1;
 		}
 		bfs(worm);
+		dfs(worm);
 		System.out.println(cnt);
 	}
+	
+	
+	
+	private static void dfs(int start) {
+		visit[start] = true;
+		for(int i = 1; i <= node; i++) {
+			if(arr[start][i] == 1 && !visit[i]) {
+				dfs(i);
+				cnt++;
+			}
+		}
+		
+	}
+
+
+
 	private static void bfs(int start) {
 		que.offer(start);
 		visit[start] = true;
