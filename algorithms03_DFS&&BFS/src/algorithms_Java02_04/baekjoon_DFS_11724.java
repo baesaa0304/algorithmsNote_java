@@ -1,18 +1,19 @@
-package algorithms_Java02_4;
+package algorithms_Java02_04;
 
-import java.io.*;
 import java.util.*;
+import java.io.*;
 
-public class baekjoon_BFS_11724 {
+
+public class baekjoon_DFS_11724 {
 	static int N , M;
 	static int u , v;
 	static int[][] arr;
 	static boolean []visit;
 	static int cnt;
-	static Queue<Integer>que = new LinkedList<>();
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
+		
 		N = Integer.parseInt(st.nextToken());
 		M = Integer.parseInt(st.nextToken());
 		arr = new int[N+1][N+1];
@@ -23,27 +24,20 @@ public class baekjoon_BFS_11724 {
 			v = Integer.parseInt(sts.nextToken());
 			arr[u][v] = arr[v][u] = 1;
 		}
-		for(int i =1; i <= N; i++) {
+		for(int i = 1; i <= N; i++) {
 			if(!visit[i]) {
-				bfs(i);
+				dfs(i);
 				cnt++;
 			}
 		}
 		System.out.println(cnt);
 		
-	
 	}
-
-	public static void bfs(int start) {
-		que.offer(start);
+	public static void dfs(int start) {
 		visit[start] = true;
-		while(!que.isEmpty()) {
-			int temp = que.poll();
-			for(int i = 1; i <=N; i++) {
-				if(arr[temp][i] == 1 && !visit[i]) {
-					que.offer(i);
-					visit[i] = true;
-				}
+		for(int i = 1; i <= N; i++) {
+			if(arr[start][i] == 1 && !visit[i]) {
+				dfs(i);
 			}
 		}
 		

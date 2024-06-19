@@ -15,14 +15,16 @@ public class baekjoon_1303 {
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		N = Integer.parseInt(st.nextToken()); // 가로
 		M = Integer.parseInt(st.nextToken()); // 세로 
+		arr = new char[M][N];
+        visit = new boolean[M][N];
 		for(int i = 0; i < M; i++) {
 			String line = br.readLine();
 			for(int j = 0; j < N; j++) {
 				arr[i][j] = line.charAt(j);
 			}
 		}
-		int whiteScore = 0;
-        int blueScore = 0;
+		int white = 0;
+        int blue = 0;
         
         for (int i = 0; i < M; i++) {
             for (int j = 0; j < N; j++) {
@@ -31,14 +33,14 @@ public class baekjoon_1303 {
                     bfs(i, j, arr[i][j]);
                     dfs(i, j, arr[i][j]);
                     if (arr[i][j] == 'W') {
-                        whiteScore += cnt * cnt;
+                    	white += cnt * cnt;
                     } else {
-                        blueScore += cnt * cnt;
+                    	blue += cnt * cnt;
                     }
                 }
             }
         }
-        System.out.println(whiteScore + " " + blueScore);
+        System.out.println(white + " " + blue);
 	}
 	
 	private static void bfs(int x, int y, char team) {

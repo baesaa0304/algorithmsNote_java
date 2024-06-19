@@ -1,4 +1,4 @@
-package algorithms_Java02_7;
+package algorithms_Java02_07;
 
 import java.util.*;
 import java.io.*;

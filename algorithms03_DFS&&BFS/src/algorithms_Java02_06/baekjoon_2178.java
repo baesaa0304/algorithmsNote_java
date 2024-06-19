@@ -1,4 +1,4 @@
-package algorithms_Java02_6;
+package algorithms_Java02_06;
 
 import java.io.BufferedReader;
 import java.io.IOException;
