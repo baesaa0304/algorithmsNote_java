@@ -35,7 +35,7 @@ public class baekjoon_13549 {
 			}
 			int[] nextLocations = {back, front};
 			for (int next : nextLocations) {
-                if (next >= 0 && next <= 100000){
+                if (next >= 0 && next <= 100000) {
                     if (!visit[next]) {
                         que.offer(next);
                         visit[next] = true;
