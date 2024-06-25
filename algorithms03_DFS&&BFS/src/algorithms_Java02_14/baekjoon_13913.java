@@ -15,7 +15,7 @@ public class baekjoon_13913 {
 	        subin = Integer.parseInt(st.nextToken());
 	        brother = Integer.parseInt(st.nextToken());
 
-	        if (subin == brother) {
+	        if(subin == brother) {
 	            System.out.println(0);
 	            System.out.println(subin);
 	        } else {
