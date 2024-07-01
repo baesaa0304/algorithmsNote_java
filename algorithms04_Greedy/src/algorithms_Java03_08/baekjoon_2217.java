@@ -12,10 +12,14 @@ public class baekjoon_2217 {
 		for(int i = 0; i < N; i++) {
 			weight[i] = Integer.parseInt(br.readLine());
 		}
-		 Arrays.sort(weight, Collections.reverseOrder());
 		int max_weight = 0;
+		Arrays.sort(weight);
+//		Arrays.sort(weight, Collections.reverseOrder());
+//		for (int i = 0; i < N; i++) {
+//			max_weight = Math.max(max_weight, weight[i] * (i+1));
+//        }
 		for (int i = 0; i < N; i++) {
-			max_weight = Math.max(max_weight, weight[i] * (i+1));
+			max_weight = Math.max(max_weight, weight[i] * (N - i));
         }
         System.out.print(max_weight);
 
