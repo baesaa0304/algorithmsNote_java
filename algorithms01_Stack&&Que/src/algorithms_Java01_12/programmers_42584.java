@@ -10,7 +10,7 @@ class Solution {
 
         for (int i = 0; i < N; i++) {
         	// 현 주식 가격이 다음 주식 가격 보다 큰 경우 즉 주식이 떨어진 경우 
-            while (!stack.isEmpty() && prices[i] < prices[stack.peek()]) { 
+            if (!stack.isEmpty() && prices[i] < prices[stack.peek()]) { 
                 int idx = stack.pop();
                 answer[idx] = i - idx;
             }
