@@ -29,7 +29,7 @@ class Solution {
         }
         
         // 완료자의 수를 감소
-        for (String c : completion) {
+        for (String c : completion){
             map.put(c, map.get(c) - 1);
         }
         
