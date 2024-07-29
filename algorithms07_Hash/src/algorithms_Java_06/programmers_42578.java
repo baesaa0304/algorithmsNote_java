@@ -17,7 +17,7 @@ class Solution {
                 answer *= (count + 1); // 각 카테고리에서 의상을 선택할 수 있는 경우의 수
             }
 
-            return answer - 1; // 시작을 의상 선택으로 함으로 -1
+            return answer - 1; // 안 입는 경우 뺴주
     }
 }
 public class programmers_42578 {
