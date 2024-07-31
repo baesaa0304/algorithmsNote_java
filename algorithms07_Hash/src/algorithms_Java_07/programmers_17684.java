@@ -7,15 +7,16 @@ class Solution {
     	ArrayList<Integer> list = new ArrayList<>();
 		HashMap<String, Integer> map = new HashMap<>();
 		
-		//알파벳을 넣어
+		//알파벳을 넣음! 
 		for(int i = 1; i < 27; i++) {
 			char alpha = (char) (64+i);
 			map.put(String.valueOf(alpha), i);
 		}    
-
+		
+		// 단어를 처음부터 끝가지 확인 
 		for(int i = 0; i < msg.length(); i++) {
-			String key = msg.charAt(i) + "";
-			int index = i + 1;
+			String key = msg.charAt(i) + ""; 
+			int index = i + 1; // 다음 글자 인덱
 
 			while(index <= msg.length()) {
 				if(index == msg.length()) {
