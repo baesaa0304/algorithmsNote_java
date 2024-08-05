@@ -1,22 +1,24 @@
 package algorithms_Java01_09;
 
 import java.util.*;
+
+
 class Solution {
     // map 변수
-    public static ArrayList<ArrayList<Integer>> map = new ArrayList<ArrayList<Integer>>();
+    static ArrayList<ArrayList<Integer>> map = new ArrayList<ArrayList<Integer>>();
 
     // 양의 수 
-    public static int result = 0;
+    static int result = 0;
 
-    // 각 노드의 양/늑대 구별 (전역 변수로 사용하고 싶어서 선언)
-    public static int[] node;
+    // 각 노드의 양/늑대 구별
+    static int[] node;
 
 	// DFS
 	// num : 현재 노드 인덱스 
 	// sheep : 양의 수
 	// wolf : 늑대의 수 
-	// list : 방문체크 변수 (true : 방문 O, false : 방문 X)
-    public static void DFS(int num, int sheep, int wolf, boolean[] list) {
+	// visit : 방문체크 변수 (true : 방문 O, false : 방문 X)
+    public static void DFS(int num, int sheep, int wolf, boolean[] visit) {
         // 양이면 양의 수 추가 
         if(node[num] == 0) {
             sheep++;
@@ -33,7 +35,7 @@ class Solution {
         }
 
         // 방문체크용 배열을 깊은 복사(주소가 아닌 값 복사)
-        boolean[] newList = list.clone();
+        boolean[] newList = visit.clone();
         newList[num] = true;
         
         // 기록된 양의 최대 수 보다 많을 경우 갱신 
