@@ -36,6 +36,10 @@ class Solution {
 
         // 방문체크용 배열을 깊은 복사(주소가 아닌 값 복사)
         boolean[] newList = visit.clone();
+        for(boolean s : newList) {
+        	System.out.println("방문용 배열 "+ s);
+        }
+        
         newList[num] = true;
         
         // 기록된 양의 최대 수 보다 많을 경우 갱신 
@@ -61,7 +65,6 @@ class Solution {
          
 		// 방문 체크용 변수
         boolean[] visited = new boolean[info.length];
-
         // 전역변수로 사용하기 위해 복사(얕은 복사해도 상관 없음)
         node = info;
 
