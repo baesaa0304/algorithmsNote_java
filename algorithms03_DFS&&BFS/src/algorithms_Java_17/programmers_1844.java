@@ -74,10 +74,15 @@ class Solution {
         m = maps[0].length;
         visited = new boolean[n][m];
     
-        return bfs(0, 0, maps);
+        return dfs(0,0,maps);
     }
     
-    public int bfs(int x, int y, int[][] maps){
+    public int dfs(int i, int j, int[][] maps) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public int bfs(int x, int y, int[][] maps){
         Queue<int[]> que = new LinkedList<>();
     
         que.add(new int[]{x, y, 1});
