@@ -47,7 +47,7 @@ public class baekjoon_24480 {
         }
         
         // DFS 시작
-        DFS(start);
+         DFS(start);
         
         // 결과 출력
         for (int i = 1; i <= N; i++) {
