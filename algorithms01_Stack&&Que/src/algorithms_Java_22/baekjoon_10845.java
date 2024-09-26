@@ -45,7 +45,8 @@ public class baekjoon_10845 {
                 }
             }
         }
-
+		
+		
         // 결과 출력
         for (int res : result) {
             System.out.println(res);
