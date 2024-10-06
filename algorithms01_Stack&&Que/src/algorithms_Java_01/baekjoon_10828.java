@@ -6,9 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Stack;
 import java.util.StringTokenizer;
 
-
-public class baekjoon10828 {
-
+public class baekjoon_10828 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); // Scanner 너무 시간이 걸림.. 그래서 buffer 씀
 		int N = Integer.parseInt(br.readLine()); 
@@ -52,4 +50,5 @@ public class baekjoon10828 {
 			
         }
 	}
-}		
+
+}

@@ -4,7 +4,6 @@ import java.util.*;
 import java.io.*;
 
 public class baekjoon_1996 {
-
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringBuilder sb = new StringBuilder();
@@ -48,5 +47,5 @@ public class baekjoon_1996 {
 		}
 		System.out.println(sb);
 	}
- 
+
 }

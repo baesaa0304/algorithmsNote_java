@@ -1,10 +1,10 @@
 package algorithms_Java_23;
 
+
 import java.io.*;
 import java.util.*;
 
 public class baekjoon_1158 {
-
 	public static void main(String[] args) throws IOException {
 		Queue<Integer> que = new LinkedList<>();
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -33,5 +33,6 @@ public class baekjoon_1158 {
 		System.out.println(sb);
 
 	}
+
 
 }

@@ -3,8 +3,8 @@ package algorithms_Java_15;
 import java.util.*;
 import java.io.*;
 
-public class baekjoon_1158 {
 
+public class baekjoon_1158 {
 	public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
@@ -37,4 +37,6 @@ public class baekjoon_1158 {
 
         System.out.println(sb);
     }
+
+	
 }

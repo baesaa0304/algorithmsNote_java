@@ -4,7 +4,6 @@ import java.io.*;
 import java.util.*;
 
 public class baekjoon_9093_char {
-
 	public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int T = Integer.parseInt(br.readLine());
@@ -24,4 +23,5 @@ public class baekjoon_9093_char {
             System.out.println(); // 각 테스트 케이스 후 줄바꿈
         }
     }
+
 }
