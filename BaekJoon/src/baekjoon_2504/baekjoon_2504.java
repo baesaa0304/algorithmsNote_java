@@ -1,4 +1,4 @@
-package Sliver.baekjoon_2504;
+package baekjoon_2504;
 
 import java.util.*;
 import java.io.*;
