@@ -49,7 +49,7 @@ public class baekjoon_2504 {
             }
         }
 
-        // 스택이 비어 있지 않으면 짝이 맞지 않는 것이므로 0 출력
+        // 스택이 비어 있지 않으면 짝이 맞지 않는 것이므로 0출력
         if (!stack.isEmpty()) {
             System.out.println(0);
         } else {
