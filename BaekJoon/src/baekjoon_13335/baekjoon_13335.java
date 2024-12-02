@@ -23,35 +23,30 @@ public class baekjoon_13335 {
 		for(int i = 0; i < n; i++) {
 			truck[i] = Integer.parseInt(st.nextToken());
 		}
-		for(int i = 0; i < n; i++) {
-			while(true) {
-				if(que.isEmpty()) {
-					que.offer(truck[i]);
-					l_weight+=truck[i]; // 무게를 추가해줌 
-					time++;
-					break;
-				}
-				else if(que.size() == w) { // 트럭 길이 만큼 찬 경우 
-					int poll = que.poll();
-					l_weight -= poll;
-					time++;
-				}
-				else if(l_weight + truck[i] <= L) { // 트럭이 무게를 초과하지 않는 경우 
-					que.offer(truck[i]);
-					l_weight  += truck[i];
-					time++;
-					break;
-				}
-				else {
-					que.offer(0); //트럭이 무게 초과하는 경우는 0으로 
-					time++;
-				}
-			}
+		for(int i =0; i < w; i++) {
+			que.offer(0);
 		}
-		time += w;
-		
-		System.out.println(time);
+		int idx = 0;
+		 while (idx < n) {
+	            // 1. 다리 끝에서 트럭 제거
+	            l_weight -= que.poll();
+	            
+	            // 2. 현재 트럭을 다리에 올릴 수 있는지 확인
+	            if (l_weight + truck[idx] <= L) {
+	                que.offer(truck[idx]); // 트럭을 다리에 올림
+	                l_weight += truck[idx];
+	                idx++; // 다음 트럭으로 이동
+	            } else {
+	                que.offer(0); // 무게 초과로 트럭을 올리지 못하면 빈 공간 추가
+	            }
+	            
+	            // 3. 시간 증가
+	            time++;
+	        }
+	        
+	        // 마지막 트럭이 다리를 완전히 건너는 시간 추가
+	        time += w;
 
+	        System.out.println(time);
+	    }
 	}
-
-}
