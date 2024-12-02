@@ -4,30 +4,31 @@ import java.io.*;
 import java.util.*;
 
 public class baekjoon_13335 {
-
-	public static void main(String[] args) throws IOException{
-		// 첫 번째 줄에는 n은 다리를 건너는 트럭의 수, w는 다리의 길이, 그리고 L은 다리의 최대하중
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		StringTokenizer st = new StringTokenizer(br.readLine());
-		int n = Integer.parseInt(st.nextToken()); // 다리를 건너는 트럭 
-		int w = Integer.parseInt(st.nextToken()); // 다리 길이
-		int L = Integer.parseInt(st.nextToken()); // 다리 무게
-		
-		int truck[] = new int[n];
-		int l_weight = 0; // 다리에 있는 트럭무게 
-		int time =0;  // 시간 
-		
-		Queue<Integer> que = new LinkedList<>();
-		st = new StringTokenizer(br.readLine());
-		// 트럭값 입력받기 
-		for(int i = 0; i < n; i++) {
-			truck[i] = Integer.parseInt(st.nextToken());
-		}
-		for(int i =0; i < w; i++) {
-			que.offer(0);
-		}
-		int idx = 0;
-		 while (idx < n) {
+	
+		public static void main(String[] args) throws IOException {
+	        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	        StringTokenizer st = new StringTokenizer(br.readLine());
+	        
+	        int n = Integer.parseInt(st.nextToken()); // 트럭 수
+	        int w = Integer.parseInt(st.nextToken()); // 다리 길이
+	        int L = Integer.parseInt(st.nextToken()); // 다리 최대 하중
+	        
+	        int[] truck = new int[n];
+	        st = new StringTokenizer(br.readLine());
+	        for (int i = 0; i < n; i++) {
+	            truck[i] = Integer.parseInt(st.nextToken());
+	        }
+	        
+	        Queue<Integer> que = new LinkedList<>();
+	        for (int i = 0; i < w; i++) {
+	            que.offer(0); // 다리 초기화 (빈 공간)
+	        }
+	        
+	        int time = 0;  // 경과 시간
+	        int l_weight = 0; // 현재 다리 위의 총 무게
+	        int idx = 0; // 처리할 트럭의 인덱스
+	        
+	        while (idx < n) {
 	            // 1. 다리 끝에서 트럭 제거
 	            l_weight -= que.poll();
 	            
