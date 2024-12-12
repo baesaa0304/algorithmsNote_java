@@ -18,7 +18,7 @@ public class baekjoon_10809 {
         // 문자열을 순차적으로 탐색
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
-            int index = c - 'a';  // 'a'를 0으로, 'b'를 1로, ..., 'z'를 25로 매핑
+            int index = c - 'a'; 
 
             // 첫 등장 위치 기록
             if (result[index] == -1) {
